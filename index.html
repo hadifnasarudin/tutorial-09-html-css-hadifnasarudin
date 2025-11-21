@@ -3,31 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My resume - Home</title>
+    <title>Hadif Portfolio - Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to My Personal Resume</h1>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="container">
+        <h2 class="logo">My Portfolio</h2>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="hobbies.html">About</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="hobbies.html">Hobbies</a>
             <a href="contact.html">Contact</a>
         </nav>
-    </header>
+    </div>
+</header>
 
-    <section>
-        <h2>About Me</h2>
-        <img src="profile.jpg" alt="My photo" width="150">
-        <p>Hello! My name is <b>Muhammad Hadif bin Nasarudin. I am a student of Bachelor of Science in (Information Technology) </b></p>
-        <ul>
-            <li>Matric Number: 297386</li>
-            <li>Program: Bachelor of Science in (Information Technology)</li>
-        </ul>
+<!-- MAIN SECTION -->
+<div class="container main">
+
+    <!-- LEFT: Profile Card -->
+    <div class="card">
+        <img src="asset/gmbrformal - Copy.png" class="profile-img" alt="My Photo">
+        <h1 class="name">Muhammad Hadif bin Nasarudin</h1>
+        <p class="title">Bachelor of Science (Information Technology)</p>
+        <p class="uni">Universiti Utara Malaysia</p>
+
+        <p><a href="contact.html"><button class="btn">Contact Me</button></a></p>
+    </div>
+
+    <!-- RIGHT: About Section -->
+    <section class="content">
+        <div class="top-cards">
+            <div class="card about-card">
+            <h2>About Me</h2>
+                <p>
+                    Hi! I’m Hadif — an IT student who enjoys building clean and
+                    beautiful digital experiences. I love web development, Flutter,
+                    and exploring new tech that can solve real problems.
+                </p>
+            </div>
+
+            <div class="card education-card">
+                <h3>Education</h3>
+                <ul>
+                    <li>Bachelor of Science (Information Technology), UUM</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card skills-card">
+        <h3>Skills</h3>
+            <ul>
+                <li>Web Development (HTML, CSS, JS, PHP, SPRINGBOOT)</li>
+                <li>Mobile Development (Flutter)</li>
+                <li>Database (MySQL)</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </div>
     </section>
+</div>
 
-    <footer>
-        <p>2025 resume website</p>
-    </footer>
+<footer>
+    <p>© 2025 My Portfolio</p>
+</footer>
+
 </body>
 </html>

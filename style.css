@@ -1,37 +1,215 @@
+/* ========= THEME COLORS ========= */
+:root {
+    --bg-color: #F2F5FA;
+    --card-color: #a6bdee;
+    --primary: #6C9BCF;         /* pastel blue */
+    --text-dark: #333;
+    --text-light: #555;
+    --shadow: rgba(0,0,0,0.1);
+}
+
+/* ========= BASE ========= */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-dark);
 }
 
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
+.container {
+    width: 85%;
+    margin: auto;
+    padding: 20px 0;
 }
 
-nav a {
-    color: white;
+/* ========= NAVBAR ========= */
+.navbar {
+    background: var(--card-color);
+    box-shadow: 0 2px 10px var(--shadow);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+}
+
+.navbar .logo {
+    float: left;
+    font-size: 22px;
+}
+
+.navbar nav {
+    float: right;
+}
+
+.navbar nav a {
+    margin-left: 20px;
     text-decoration: none;
-    margin: 0 10px;
+    color: var(--text-light);
+    font-size: 16px;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.navbar nav a.active {
+    color: var(--primary);
+    font-weight: bold;
 }
 
-section {
+/* Clear fix */
+.navbar::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ========= HOME PAGE LAYOUT ========= */
+.main {
+    display: flex;
+    gap: 40px;
+    padding-top: 30px;
+}
+
+/* ========= PROFILE CARD ========= */
+.card {
+    width: 320px; /* adjust width here */
+    background: var(--card-color);
     padding: 20px;
-    background-color: white;
-    margin: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 12px var(--shadow);
+}
+
+/* Adjust card height manually (optional) */
+.card.smaller {
+    height: 250px; /* awak boleh adjust */
+}
+
+.profile-img {
+    width: 60%;
     border-radius: 10px;
 }
 
-footer {
-    background-color: #333;
+.name {
+    margin: 10px 0 5px;
+    font-size: 22px;
+}
+
+.title {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.btn {
+    background: var(--primary);
     color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ========= RIGHT CONTENT NEW LAYOUT ========= */
+.right-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* jarak antara rows */
+}
+
+/* top row (2 cards side by side) */
+.top-cards {
+    display: flex;
+    gap: 25px; /* jarak antara 2 card */
+    padding-bottom: 25px;
+}
+
+/* each top card width */
+.about-card,
+.education-card {
+    flex: 1; /* dua-dua sama lebar */
+    padding: 20px;
+    text-align: left;
+}
+
+/* bottom card full width */
+.skills-card {
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+}
+
+/* OPTIONAL: custom height */
+.about-card {
+    min-height: 180px;
+}
+
+.education-card {
+    min-height: 180px;
+}
+
+.skills-card {
+    min-height: 200px;
+}
+
+
+/* ========= HOBBIES GRID ========= */
+.page-title {
     text-align: center;
+    margin-bottom: 25px;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.hobby-card {
+    background: var(--card-color);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 10px var(--shadow);
+}
+
+/* ========= CONTACT ========= */
+.contact-wrapper {
+    display: flex;
+    gap: 40px;
+    padding-top: 20px;
+}
+
+.contact-info {
+    width: 40%;
+}
+
+.contact-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
     padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+/*========== Card effect =======*/
+.card:hover {
+    transform: translateY(-10px) scale(1.05); /* Move up and slightly enlarge */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+/* ========= FOOTER ========= */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-light);
 }
